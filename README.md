@@ -1,11 +1,17 @@
 由于直接用autounattend.xml会有一定风险格式化的OS安装盘.
 现在分享一个通过WinPE自动安装的方案来满足各种OS安装的要求.
 这个WinPE现在有如下特性:
+
 	自动寻找OS安装盘符
+
 	自动判断测试系统是否识别到内置硬盘, 避免格式化U盘
+
 	多种OS 版本集合一起, 通过批处理命令来选择安装.
+
 	在U盘根目录放入autounattend_pro/home.xml, 然后创建RS5\19H1\19H2 文件夹, 并放入对应的OS安装文件.
+
 U盘启动进入WinPE后, 可以输入对应的参数来安装不同的OS.
+
 (autounattend_pro/home.xml设置的区域语言键盘是US, user: test, psw:1)
  
 
