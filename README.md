@@ -20,10 +20,13 @@ D:\WinPE_amd64\mount 为boot.wim的加载载路径.
 3.	加载完boot.wim后, 找出Startnet.cmd文件来进行编辑, 位于D:\WinPE_amd64\mount\Windows\system32\Startnet.cmd.
 Startnet.cmd是winpe启动时自动运行的脚本, 写入自己的命令来达到我们的要求.
 比如: 寻找OS安装盘的盘符, 这里我用Owen来做标记符, 只要U盘根目录下创建Owen这个文件夹, 就可以找到你的盘符, 你也可以其他名称来替换.
+
 for %%a in (C D E F G H I J K L M N O P Q R S T U V W X Y Z) do (if exist %%a:\Owen\ set IMAGESDRIVE=%%a)
+
 echo The OS folder is on drive: %IMAGESDRIVE%
 
 ::判断测试系统能否识别到内置的硬盘, 如果不能识别则退出安装.
+
 set getdiskinfo=%IMAGESDRIVE%:\getdiskinfo.txt
 set diskinfo=%IMAGESDRIVE%:\diskinfo.txt
 set lastdisk=%IMAGESDRIVE%:\lastdisk.txt
