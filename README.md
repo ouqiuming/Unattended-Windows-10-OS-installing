@@ -30,9 +30,13 @@ set lastdisk=%IMAGESDRIVE%:\lastdisk.txt
 
 diskpart /s %getdiskinfo% > %diskinfo%
 echo=
+
 echo ==================Disk info==================
+
 for /f "delims=~" %%i in (%diskinfo%) do echo %%i
+
 echo ==================End========================
+
 echo=
 
 for /f "delims=" %%i in (%diskinfo%) do (
