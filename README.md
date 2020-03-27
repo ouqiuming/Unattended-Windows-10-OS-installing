@@ -41,6 +41,7 @@ set diskinfo=%IMAGESDRIVE%:\diskinfo.txt
 set lastdisk=%IMAGESDRIVE%:\lastdisk.txt
 
 diskpart /s %getdiskinfo% > %diskinfo%
+
 echo=
 
 echo ==================Disk info==================
