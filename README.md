@@ -52,7 +52,9 @@ set lastdisksign=%%~x
 
 if %lastdisksign% equ 0 goto exit_install_no_disk
 echo The last disk sign is %lastdisksign%, it is mean can find inbuilt disk.
+
 echo=
 
 4.	修改完Startnet.cmd, 通过下面的命令卸载boot.wim.
+
 Dism /Unmount-Image /MountDir:"d:\WinPE_amd64\mount" /commit
