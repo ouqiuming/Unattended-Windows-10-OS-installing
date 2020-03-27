@@ -52,19 +52,11 @@ echo ==================End========================
 
 echo=
 
-for /f "delims=" %%i in (%diskinfo%) do (
-
-set lastLine=%%~i
-
-)
+for /f "delims=" %%i in (%diskinfo%) do (set lastLine=%%~i)
 
 echo %lastLine% > %lastdisk%
 
-for /f "tokens=2" %%x in (%lastdisk%) do (
-
-set lastdisksign=%%~x
-
-)
+for /f "tokens=2" %%x in (%lastdisk%) do (set lastdisksign=%%~x)
 
 if %lastdisksign% equ 0 goto exit_install_no_disk
 
