@@ -35,7 +35,9 @@ echo The OS folder is on drive: %IMAGESDRIVE%
 ::判断测试系统能否识别到内置的硬盘, 如果不能识别则退出安装.
 
 set getdiskinfo=%IMAGESDRIVE%:\getdiskinfo.txt
+
 set diskinfo=%IMAGESDRIVE%:\diskinfo.txt
+
 set lastdisk=%IMAGESDRIVE%:\lastdisk.txt
 
 diskpart /s %getdiskinfo% > %diskinfo%
