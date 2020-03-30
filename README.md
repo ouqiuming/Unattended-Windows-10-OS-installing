@@ -17,7 +17,7 @@ U盘启动进入WinPE后, 可以输入对应的参数来安装不同的OS.
 
 下面是怎么创建属于自己的WinPE 安装盘
 Step to customize WinPE:
-1.	创建一个pure 的WinPE环境,  大家可以从下面链接学习一下, 这里有一个我创建的pure WinPE.
+1.	创建一个pure 的WinPE环境,  大家可以从下面链接学习一下
 https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/winpe-create-usb-bootable-drive
 2.	加载boot.wim文件
 Dism /Mount-Image /ImageFile:"J:\sources\boot.wim" /index:1 /MountDir:"D:\WinPE_amd64\mount"
